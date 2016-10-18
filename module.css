@@ -1,0 +1,135 @@
+.persona-button {
+    background: #40434b;
+    color: #888;
+    position: fixed;
+    top: 50%;
+    right: -40px;
+    transform: rotate(90deg) translate3d(0, 0, 0);
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px solid #ccc;
+
+    transition-property: transform;
+	transition-duration: 0.3s;
+	transition-delay: 0.3s;
+}
+
+.show-drawer .persona-button {
+    transform: rotate(90deg) translate3d(0, -100%, 0);
+}
+
+.persona-button:hover {
+    color: #fff;
+}
+
+.persona-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 0;
+    z-index: 1001;
+    background: rgba(20,20,20,.5);
+    color: white;
+    transform: translate3d(100%,0, 0);
+
+    transition-property: transform;
+	transition-duration: 0.3s;
+	transition-delay: 0.3s;
+}
+
+.show-drawer .persona-drawer {
+    transform: translate3d(0, 0, 0);
+}
+.persona-title {
+    margin: 0 10px 10px 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #555;
+}
+
+.persona-title .fa {
+    font-size: 18px;
+}
+
+a.persona-add, a.persona-add:visited {
+    color: white;
+}
+
+a.persona-add:hover{
+    color: deepskyblue;
+}
+
+ul.persona-list {
+    margin: 0;
+    padding: 0;
+}
+
+li.persona-detail {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin: 10px;
+    position: relative;
+}
+
+.persona-frame {
+    border: 3px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background: black;
+    color: #fff;
+    width: 100px;
+    display: inline-block;
+    box-shadow: 2px 2px 7px black;
+}
+
+.persona-frame:hover {
+    color: #00a4e4;
+}
+
+.persona-frame:hover > img {
+    opacity: 1;
+    cursor: pointer;
+}
+.persona-frame > img {
+    opacity: .7;
+}
+
+.persona-name {
+    position: absolute;
+    bottom: 0;
+    background: rgba(20,20,20, .6);
+    display: block;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+
+.persona-links {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.persona-links a, .persona-links a:visited {
+    color:white;
+}
+
+.persona-links a:hover {
+    color: deepskyblue;
+}
+
+.persona-links .fa {
+    font-size: 18px;
+    margin: 5px;
+    display: block;
+}
+

@@ -20,6 +20,7 @@
             <a class="persona-add dnnLeft" data-bind="visible: editMode(), attr: {href: addUrl}"><i class="fa fa-plus" aria-hidden="true"></i></a>
             <a class="persona-add dnnRight" data-bind="click: hide"><i class="fa fa-times" aria-hidden="true"></i></a>
         </div>
+        <!-- ko if: personaList().length > 0 -->
         <ul class="persona-list" data-bind="foreach: personaList">
             <li class="persona-detail">
                 <div class="persona-frame" data-bind="click: $parent.switchUser">
@@ -32,6 +33,13 @@
                 </div>
             </li>
         </ul>
+        <!-- /ko -->
+        <!-- ko ifnot: personaList().length > 0 -->
+        <div class="persona-404">
+            <h2>404!</h2>
+            <div>No personas found!</div>
+        </div>
+        <!-- /ko -->
     </div>
 </div>
 

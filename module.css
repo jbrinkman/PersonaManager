@@ -34,6 +34,7 @@
     z-index: 1001;
     background: rgba(20,20,20,.5);
     color: white;
+    min-width: 125px;
     transform: translate3d(100%,0, 0);
 
     transition-property: transform;
@@ -144,4 +145,18 @@ li.persona-detail {
 .persona-notice i.fa {
     float: right;
     color: gold;
+}
+
+.persona-404 {
+    color: #999;
+    text-shadow: 1px 1px 2px #333;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.persona-404 h2 {
+    color: #999;
+    font-size: 40px;
+    font-weight: bold;
 }

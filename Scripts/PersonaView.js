@@ -10,9 +10,7 @@ PersonaManager.personaListViewModel = function (moduleId, resx) {
 
     var isLoading = ko.observable(false);
     var personaList = ko.observableArray([]);
-    var editMode = ko.computed(function () {
-        return personaList().length > 0 && personaList()[0].editUrl().length > 0;
-    });
+    var editMode = ko.observable(false);
     var addUrl = ko.observable('');
 
     var init = function () {
@@ -58,6 +56,7 @@ PersonaManager.personaListViewModel = function (moduleId, resx) {
 
     var load = function (data) {
         addUrl(data.addUrl);
+        editMode(data.editMode);
         personaList.removeAll();
         if (data.personas) {
             var underlyingArray = personaList();

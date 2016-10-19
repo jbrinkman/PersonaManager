@@ -8,9 +8,10 @@ namespace TAG.Modules.PersonaManager.Services.ViewModels
 {
     public class PersonaListViewModel
     {
-        public PersonaListViewModel(string addUrl)
+        public PersonaListViewModel(string addUrl, bool editMode)
         {
             AddUrl = addUrl;
+            EditMode = editMode;
         }
 
         [JsonProperty("personas")]
@@ -18,5 +19,10 @@ namespace TAG.Modules.PersonaManager.Services.ViewModels
 
         [JsonProperty("addUrl")]
         public string AddUrl { get; set; }
+
+        [JsonProperty("editMode")]
+        public bool EditMode { get; set; }
+
+
     }
 }

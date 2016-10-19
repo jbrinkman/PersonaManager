@@ -9,6 +9,8 @@ using DotNetNuke.Web.Api;
 using DotNetNuke.Security;
 using DotNetNuke.Common.Utilities;
 using System.Collections.Generic;
+using DNNUserController = DotNetNuke.Entities.Users.UserController;
+using DotNetNuke.Entities.Modules;
 
 namespace TAG.Modules.PersonaManager.Services
 {
@@ -45,7 +47,7 @@ namespace TAG.Modules.PersonaManager.Services
 
         public HttpResponseMessage GetList()
         {
-            var personaList = new PersonaListViewModel(GetEditUrl(-1));
+            var personaList = new PersonaListViewModel(GetEditUrl(-1), Globals.IsEditMode());
 
             List<PersonaViewModel> personas;
 

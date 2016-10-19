@@ -54,7 +54,7 @@ namespace TAG.Modules.PersonaManager.Components
         public void DeletePersona(Persona t)
         {
             Requires.NotNull(t);
-            Requires.PropertyNotNegative(t, "ItemId");
+            Requires.PropertyNotNegative(t, "Id");
 
             using (IDataContext ctx = DataContext.Instance())
             {

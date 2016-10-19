@@ -7,6 +7,13 @@
 [ModuleAction:{controlKey : "Edit", securityAccessLevel : "Edit",  titleKey: "EditModule", localResourceFile: "~/DesktopModules/PersonaManager/App_LocalResources/View.resx" }]
 
 <div id="Personas-[ModuleContext:ModuleId]" class="persona-manager">
+    <div  data-bind="visible: editMode()" class="persona-notice dnnFormMessage dnnFormWarning">
+        <i class="fa fa-exclamation-triangle fa-3x" aria-hidden="true"></i>
+        <h2>DNN Persona Manager</h2>
+        <div>The Persona Manager allows users to elevate permissions and impersonate other users. 
+        This module is designed for development purposes only and should not be installed on a 
+        production website.</div>
+    </div>
     <div class="persona-button" data-bind="click: show">Personas</div>
     <div class="persona-drawer">
         <div class="persona-title dnnClear">

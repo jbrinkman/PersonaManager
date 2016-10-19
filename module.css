@@ -133,3 +133,15 @@ li.persona-detail {
     display: block;
 }
 
+.persona-notice.dnnFormMessage.dnnFormWarning {
+    position: relative;
+    text-align: left;
+    border: 1px solid goldenrod;
+    background-color: lightyellow;
+    color: #666;
+}
+
+.persona-notice i.fa {
+    float: right;
+    color: gold;
+}

@@ -135,4 +135,7 @@
   <data name="EditModule.Text" xml:space="preserve">
     <value>Add Item</value>
   </data>
+  <data name="Notice.Text" xml:space="preserve">
+    <value>&lt;h2&gt;&lt;/h2&gt;</value>
+  </data>
 </root>
